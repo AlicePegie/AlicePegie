@@ -1,7 +1,6 @@
 *{box-sizing: border-box;}
 body {
-    font-family: 'Shrikhand','Roboto' sans-serif;
-
+    font-family: Roboto, sans-serif;
 }
 /* Header*/
 .Header {
@@ -57,9 +56,10 @@ body {
     display: flex;
     width: 100%;
 }
-    a:link{
+a{
         text-decoration: none;
-      }
+        color:currentColor
+      }*
 /*Main*/
 .main {
     display:flex;
@@ -90,7 +90,7 @@ body {
 }
 .button{
     width: 50%;
-    background-color:#d735c9a7;
+    background:linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
     border-radius: 25px;
     display:flex;
     justify-content: center;
@@ -146,12 +146,17 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 180px;
     margin-bottom: 20px;
     border-radius: 20px;
-    height: 350px;
-    box-ow: 0 0 20px #0000002e;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
 }
 .Restaurant-img{
+    display: flex;
+    justify-items: center;
+    align-items: center;
     width: 100%;
     height: 80%;
     object-fit: cover;
@@ -173,9 +178,9 @@ body {
    padding: 10px;
 }
 .Restautant-text{
-    display: flex;
-  justify-content: center;
- width: 80%;
+display: flex;
+justify-content: center;
+ width: 90%;
  flex-direction: column;
 }
 .Restautant-text h3 {
@@ -190,8 +195,30 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20%;
+    position: relative;
+    width: 10%;
+    transition: all;
 }
+.Like-empty{
+    position: absolute;
+}
+.Like-full{
+    position: absolute;
+    color:#9356dc;
+    opacity: 0;
+    
+}
+.Like-full:hover{
+    position: absolute;
+    color:#9356dc;
+    opacity: 1;
+    
+}
+.Like:hover {
+    color:#9356dc;
+    transform: scale(1.1);opacity: 0 to 1;;
+}
+
 .Footer{
     background-color: #000;
     color: white;
@@ -212,7 +239,7 @@ body {
  .Footer i{
    width: 8%;
 }
-/*page La Palette du goût*/
+/*pages*/
 
 .Header-menu{
    width: 100%;
@@ -229,9 +256,7 @@ body {
     align-items: center;
     margin: 10px 0 10px 0;
 }
-.Title h2{
-    font-family: shrikhand;
-}
+
 .Main-menu{
     display: flex;
     flex-direction: column;
@@ -261,7 +286,6 @@ body {
     width: 100%;
     font-family: Roboto;
     font-size: 18px;
-    font-weight: 400px;
     margin:10px 0 10px 0;
     padding: 0 0 0 15px ;
 }
